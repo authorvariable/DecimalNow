@@ -99,7 +99,7 @@ export class HomeComponent implements OnInit {
     private getTime(dhours: number, dminutes: number, dseconds: number) {
         var hours = (dhours * 8640);
         var minutes = dminutes * (864/10);
-        var seconds = (dseconds * 60) / 100;
+        var seconds = dseconds * (864/1000);
         return new Date(2000, 1, 1, 0, 0, seconds + hours + minutes).toLocaleTimeString('en-GB');
     }
 
